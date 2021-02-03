@@ -60,7 +60,6 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="eit-di-jhP" firstAttribute="height" secondItem="vf7-cT-7e8" secondAttribute="height" id="dVO-fd-vxa"/>
-                                    <constraint firstAttribute="height" secondItem="vf7-cT-7e8" secondAttribute="height" multiplier="2.71739" id="kT6-zf-Vg2"/>
                                 </constraints>
                             </stackView>
                         </subviews>
