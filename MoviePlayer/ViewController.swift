@@ -37,6 +37,12 @@ class ViewController: UIViewController {
         //url을 얻은 후 playVideo 함수 호출 -> 이와 같이 하면 소스가 간략해지고 수정하기 편리함
         playVideo(url: url)
     }
+    
+    @IBAction func btnPlayIneralMovie2(_ sender: UIButton) {
+        let filePath:String? = Bundle.main.path(forResource: "Mountaineering", ofType: "mov")
+        let url = NSURL(fileURLWithPath: filePath!)
+        playVideo(url: url)
+    }
     @IBAction func btnPlayExternalMovie(_ sender: UIButton) {
         // 외부 파일 mp4
         
@@ -55,6 +61,12 @@ class ViewController: UIViewController {
         //url을 얻은 후 playVideo 함수 호출 -> 이와 같이 하면 소스가 간략해지고 수정하기 편리함
         playVideo(url: url)
     }
+    
+    @IBAction func btnPlayExternalMovie2(_ sender: UIButton) {
+        let url = NSURL(string: "https://dl.dropboxusercontent.com/s/ijybpprsmx0bgre/Seascape.mov")!
+        playVideo(url: url)
+    }
+    
     
     // url을 인수로 받는 playVideo함수 생성 - 비디오 재생 함수
     private func playVideo(url: NSURL) {

@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="olp-eL-Gt9">
-                                <rect key="frame" x="16" y="64" width="358" height="750"/>
+                                <rect key="frame" x="16" y="124" width="358" height="650"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="앱 내부 비디오 재생" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r9K-FR-IPf">
                                         <rect key="frame" x="113.66666666666666" y="0.0" width="131" height="32"/>
@@ -28,21 +28,72 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vf7-cT-7e8">
-                                        <rect key="frame" x="0.0" y="32" width="358" height="276"/>
-                                        <state key="normal" title="Button" image="FastTyping.jpg"/>
-                                        <connections>
-                                            <action selector="btnPlayInernalMovie:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Khp-ul-ecT"/>
-                                        </connections>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="dbZ-Xo-nQt">
+                                        <rect key="frame" x="0.0" y="32" width="358" height="193"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="pwf-ZF-hsv">
+                                                <rect key="frame" x="0.0" y="0.0" width="179" height="193"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vf7-cT-7e8">
+                                                        <rect key="frame" x="5" y="0.0" width="169" height="161"/>
+                                                        <state key="normal" title="Button" image="FastTyping.jpg"/>
+                                                        <connections>
+                                                            <action selector="btnPlayInernalMovie:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Khp-ul-ecT"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mp4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kGC-PM-Epd">
+                                                        <rect key="frame" x="72" y="161" width="35" height="32"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="32" id="lYT-qM-ss3"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="vf7-cT-7e8" firstAttribute="leading" secondItem="pwf-ZF-hsv" secondAttribute="leading" constant="5" id="CBP-ij-59E"/>
+                                                    <constraint firstAttribute="trailing" secondItem="vf7-cT-7e8" secondAttribute="trailing" constant="5" id="YLP-9M-x0m"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="vgi-Cc-bTe">
+                                                <rect key="frame" x="179" y="0.0" width="179" height="193"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s0T-7Y-W4E">
+                                                        <rect key="frame" x="5" y="0.0" width="169" height="161"/>
+                                                        <state key="normal" title="Button" image="Mountaineering.jpg"/>
+                                                        <connections>
+                                                            <action selector="btnPlayIneralMovie2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vph-ia-n5Z"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mov" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L1G-ax-bNM">
+                                                        <rect key="frame" x="73.333333333333314" y="161" width="32.666666666666657" height="32"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="32" id="xNf-pp-TTc"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="s0T-7Y-W4E" firstAttribute="leading" secondItem="vf7-cT-7e8" secondAttribute="trailing" constant="10" id="JdE-1g-7kv"/>
+                                            <constraint firstItem="vf7-cT-7e8" firstAttribute="width" secondItem="s0T-7Y-W4E" secondAttribute="width" id="nns-50-xu9"/>
+                                        </constraints>
+                                    </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9eE-qI-pM1">
-                                        <rect key="frame" x="154" y="308" width="50" height="134"/>
+                                        <rect key="frame" x="154" y="225" width="50" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="Pk9-iZ-Pcf"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="외부 링크 비디오 재생" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AUu-V0-lh0">
-                                        <rect key="frame" x="106.33333333333333" y="442" width="145.66666666666669" height="32"/>
+                                        <rect key="frame" x="106.33333333333333" y="425" width="145.66666666666669" height="32"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="32" id="uq4-KX-PtI"/>
                                         </constraints>
@@ -50,26 +101,74 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eit-di-jhP">
-                                        <rect key="frame" x="0.0" y="474" width="358" height="276"/>
-                                        <state key="normal" title="Button" image="Fireworks.jpg"/>
-                                        <connections>
-                                            <action selector="btnPlayExternalMovie:" destination="BYZ-38-t0r" eventType="touchUpInside" id="grl-eA-zPn"/>
-                                        </connections>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gio-7v-Kzt">
+                                        <rect key="frame" x="0.0" y="457" width="358" height="193"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5bW-bg-acD">
+                                                <rect key="frame" x="0.0" y="0.0" width="179" height="193"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eit-di-jhP">
+                                                        <rect key="frame" x="5" y="0.0" width="169" height="161"/>
+                                                        <state key="normal" title="Button" image="Fireworks.jpg"/>
+                                                        <connections>
+                                                            <action selector="btnPlayExternalMovie:" destination="BYZ-38-t0r" eventType="touchUpInside" id="grl-eA-zPn"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mp4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yVx-ao-kth">
+                                                        <rect key="frame" x="72" y="161" width="35" height="32"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="32" id="ZYu-ge-w5V"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="eit-di-jhP" secondAttribute="trailing" constant="5" id="uNd-Zz-Jn9"/>
+                                                    <constraint firstItem="eit-di-jhP" firstAttribute="leading" secondItem="5bW-bg-acD" secondAttribute="leading" constant="5" id="wU9-Vo-g89"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Arr-CH-3eC">
+                                                <rect key="frame" x="179" y="0.0" width="179" height="193"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iz7-13-5iU">
+                                                        <rect key="frame" x="5" y="0.0" width="169" height="161"/>
+                                                        <state key="normal" title="Button" image="Seascape.jpg"/>
+                                                        <connections>
+                                                            <action selector="btnPlayExternalMovie2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4zn-xG-oR2"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mov" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qpl-gz-alO">
+                                                        <rect key="frame" x="73.333333333333314" y="161" width="32.666666666666657" height="32"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="32" id="fGf-nG-6px"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="iz7-13-5iU" firstAttribute="width" secondItem="eit-di-jhP" secondAttribute="width" id="UyQ-DU-v90"/>
+                                            <constraint firstItem="iz7-13-5iU" firstAttribute="leading" secondItem="eit-di-jhP" secondAttribute="trailing" constant="10" id="qfX-n4-b4f"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="eit-di-jhP" firstAttribute="height" secondItem="vf7-cT-7e8" secondAttribute="height" id="dVO-fd-vxa"/>
+                                    <constraint firstItem="eit-di-jhP" firstAttribute="height" secondItem="vf7-cT-7e8" secondAttribute="height" id="UGe-Tp-FYA"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="olp-eL-Gt9" secondAttribute="bottom" constant="30" id="CZU-sk-iBb"/>
+                            <constraint firstAttribute="trailing" secondItem="olp-eL-Gt9" secondAttribute="trailing" constant="16" id="BsR-Tb-inv"/>
+                            <constraint firstAttribute="bottom" secondItem="olp-eL-Gt9" secondAttribute="bottom" constant="70" id="CZU-sk-iBb"/>
                             <constraint firstItem="olp-eL-Gt9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="fQL-LF-IgA"/>
-                            <constraint firstItem="olp-eL-Gt9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="jmi-bv-v0P"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="olp-eL-Gt9" secondAttribute="trailing" constant="16" id="kIt-uD-XIG"/>
+                            <constraint firstItem="olp-eL-Gt9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="jmi-bv-v0P"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -81,6 +180,8 @@
     <resources>
         <image name="FastTyping.jpg" width="640" height="360"/>
         <image name="Fireworks.jpg" width="640" height="360"/>
+        <image name="Mountaineering.jpg" width="640" height="360"/>
+        <image name="Seascape.jpg" width="640" height="360"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
